@@ -57,7 +57,7 @@ body, html {
 }
 
 .breadcrumb a:hover {
-    color: black;
+    color: blue;
 }
 
 /* Map Section */
@@ -146,7 +146,7 @@ body, html {
 }
 
 .contact-form input:focus, .contact-form textarea:focus {
-    border: 2px solid yellow;
+    border: 2px solid orange;
 }
 
 textarea {
