@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Us</title>
+    <title>Sign Up</title>
     <link rel="stylesheet" href="styleSignUp.css">
 </head>
 <body>
@@ -11,11 +11,47 @@
     <section class="hero">
         <div class="overlay"></div>
         <div class="hero-content">
-            <h1>Contact</h1>
+            <h1>Registration</h1>
         </div>
     </section>
 
     <button class="breadcrumb">
-        <a href="index.html">HOME</a> > CONTACT
+        <a href="index.html">HOME</a> > Registration
     </button>
-</section>
+
+    <section class="signup-section">
+        <div class="signup-container">
+            <h2 class="section-header blue-header">Registration</h2>
+            <p class="section-description">
+                If you don't have an account with us, please register.
+            </p>
+    
+            <div class="form-group">
+                <label for="username">Username *</label>
+                <input type="text" id="username" class="input-field" placeholder="Your Username">
+            </div>
+    
+            <div class="form-group">
+                <label for="email">Email address *</label>
+                <input type="email" id="email" class="input-field" placeholder="Your Email address">
+            </div>
+            
+            <div class="form-group">
+                <label for="password">Password *</label>
+                <input type="password" id="password" class="input-field" placeholder="Type Password">
+            </div>
+    
+            <p class="section-description">
+                Your personal data will be used to support your experience throughout this
+                website, to manage access to your account, and for other purposes described
+                in our <a href="#" class="privacy-policy">privacy policy.</a>
+            </p>
+    
+            <button class="orange-button signup-btn">REGISTER</button>
+        </div>
+    </section>
+    
+
+    <script src="scriptSignUp.js"></script>
+</body>
+</html>
