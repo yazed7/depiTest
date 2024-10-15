@@ -1,0 +1,114 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f0f0f0;
+  overflow: hidden;
+}
+
+.blur-container {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.scrollable-rectangle {
+  width: 86%;
+  height: 100%;
+  overflow-y: auto;
+  padding: 20px;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+}
+
+.scrollable-rectangle::-webkit-scrollbar {
+  width: 10px;
+}
+
+.scrollable-rectangle::-webkit-scrollbar-thumb {
+  background-color: #888;
+  border-radius: 10px;
+}
+
+.card {
+  height: 40%;
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+}
+
+.card-photo {
+  width: 150px;
+  height: 200px;
+  object-fit: cover;
+  margin-right: 20px;
+  border-radius: 10px;
+}
+
+.card-details {
+  display: flex;
+  flex-direction: column;
+  font-size: 1.7rem;
+}
+
+.card-title {
+  font-size: 4rem;
+  font-weight: bold;
+  color: rgb(8, 8, 179);
+  text-decoration: none;
+  margin-bottom: 10px;
+}
+
+.card p {
+  margin: 2px 0;
+}
+
+.blur-container::before,
+.blur-container::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 100px;
+  background: rgb(255, 255, 255);
+  backdrop-filter: blur(10px);
+}
+
+.blur-container::before {
+  left: 0;
+}
+
+.blur-container::after {
+  right: 0;
+}
+
+@media (max-width: 768px) {
+  .scrollable-rectangle {
+    width: 90%;
+    height: 70%;
+  }
+}
+
+@media (max-width: 480px) {
+  .card-photo {
+    width: 70px;
+    height: 70px;
+  }
+  .scrollable-rectangle {
+    padding: 15px;
+  }
+}
